@@ -9,8 +9,6 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.example.notespro.MyAdapter;
-import com.example.notespro.Products;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -21,12 +19,12 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 
 public class ProductsActivity extends AppCompatActivity {
-
     RecyclerView recyclerView;
     ArrayList<Products> productsArrayList;
     MyAdapter myAdapter;
     FirebaseFirestore db;
     ProgressDialog progressDialog;
+    String store;
 
 
     @Override
@@ -43,6 +41,8 @@ public class ProductsActivity extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        store = getIntent().getStringExtra("store");
+
         db = FirebaseFirestore.getInstance();
         productsArrayList = new ArrayList<Products>();
         myAdapter = new MyAdapter(ProductsActivity.this, productsArrayList);
@@ -54,91 +54,9 @@ public class ProductsActivity extends AppCompatActivity {
 
     private void EventChangeListener() {
 
-        db.collection("coop kronoparken").orderBy("price", Query.Direction.ASCENDING)
-                .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
 
-                        if (error != null){
 
-                            if(progressDialog.isShowing())
-                                progressDialog.dismiss();
-
-                            Log.e("Firestore error!",error.getMessage());
-                            return;
-                        }
-
-                        for (DocumentChange dc: value.getDocumentChanges()){
-                            if (dc.getType() == DocumentChange.Type.ADDED){
-                                productsArrayList.add(dc.getDocument().toObject(Products.class));
-                            }
-
-                            myAdapter.notifyDataSetChanged();
-                            if(progressDialog.isShowing())
-                                progressDialog.dismiss();
-
-                        }
-
-                    }
-                });
-
-        db.collection("coop välsviken").orderBy("price", Query.Direction.ASCENDING)
-                .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-
-                        if (error != null){
-
-                            if(progressDialog.isShowing())
-                                progressDialog.dismiss();
-
-                            Log.e("Firestore error!",error.getMessage());
-                            return;
-                        }
-
-                        for (DocumentChange dc: value.getDocumentChanges()){
-                            if (dc.getType() == DocumentChange.Type.ADDED){
-                                productsArrayList.add(dc.getDocument().toObject(Products.class));
-                            }
-
-                            myAdapter.notifyDataSetChanged();
-                            if(progressDialog.isShowing())
-                                progressDialog.dismiss();
-
-                        }
-
-                    }
-                });
-
-        db.collection("ica").orderBy("price", Query.Direction.ASCENDING)
-                .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                    @Override
-                    public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-
-                        if (error != null){
-
-                            if(progressDialog.isShowing())
-                                progressDialog.dismiss();
-
-                            Log.e("Firestore error!",error.getMessage());
-                            return;
-                        }
-
-                        for (DocumentChange dc: value.getDocumentChanges()){
-                            if (dc.getType() == DocumentChange.Type.ADDED){
-                                productsArrayList.add(dc.getDocument().toObject(Products.class));
-                            }
-
-                            myAdapter.notifyDataSetChanged();
-                            if(progressDialog.isShowing())
-                                progressDialog.dismiss();
-
-                        }
-
-                    }
-                });
-
-        db.collection("lidl").orderBy("price", Query.Direction.ASCENDING)
+        db.collection(store).orderBy("price", Query.Direction.ASCENDING)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {

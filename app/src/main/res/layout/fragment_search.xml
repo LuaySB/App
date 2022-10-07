@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/card_background"
     tools:context=".SearchFragment">
-    
+
     <View
         android:id="@+id/viewHeaderBackground"
         android:layout_width="match_parent"
@@ -49,9 +49,42 @@
             android:orientation="vertical" >
 
             <include layout="@layout/dashboard_item_1" />
+
+            <Button
+                android:id="@+id/buttonIca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Veckans Erbjudanden"
+                android:textAllCaps="false" />
+
             <include layout="@layout/dashboard_item_2" />
+
+            <Button
+                android:id="@+id/buttonCoopV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Veckans Erbjudanden"
+                android:textAllCaps="false" />
+
+
+
             <include layout="@layout/dashboard_item_3" />
+            <Button
+                android:id="@+id/buttonLidl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Veckans Erbjudanden"
+                android:textAllCaps="false" />
+
+
             <include layout="@layout/dashboard_item_4" />
+            <Button
+                android:id="@+id/buttonCoopK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Veckans Erbjudanden"
+                android:textAllCaps="false" />
+
 
         </LinearLayout>
 
