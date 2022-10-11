@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -30,6 +31,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     FirebaseAuth mAuth;
     Button logOutButton;
+    ImageButton menuBtn;
 
 
     public HomeFragment() {
@@ -67,8 +69,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
         logOutButton = view.findViewById(R.id.logOutBtn);
+        menuBtn = view.findViewById(R.id.start_screen_menu_btn);
+
         logOutButton.setOnClickListener(this);
+        menuBtn.setOnClickListener((v)-> startActivity(new Intent(getContext(), QuestionsActivity.class)));
+
         return view;
     }
 

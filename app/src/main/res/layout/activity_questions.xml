@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_primary"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_bar_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/page_title"
+            android:text="Q &amp; A"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        android:layout_below="@+id/title_bar_layout">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:textStyle="bold"
+            android:text="Common questions:"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp"
+            android:id="@+id/Questions">
+
+            <TextView
+                android:id="@+id/question1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"
+                android:text="What stores are available on this app?"/>
+
+            <TextView
+                android:id="@+id/answer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="At the moment there are 4 stores available: Ica Maxi Välsviken, Stora Coop Välsviken, Lidl Kroppkärr and Coop Kronoparken"/>
+
+            <TextView
+                android:id="@+id/question2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp"
+                android:text="I can't find my store on this app. What do I do?"/>
+
+            <TextView
+                android:id="@+id/answer2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="We might add more stores in the future. At the moment these 4 stores are the only ones available"/>
+
+            <TextView
+                android:id="@+id/question3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="Does this app affect my wellbeing of my cats?"/>
+
+            <TextView
+                android:id="@+id/answer3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No this app deos not affect your wellbeing of your cats. If you are lucky there might be some offers on fresh catfood"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
