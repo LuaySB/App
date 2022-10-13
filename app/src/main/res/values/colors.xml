@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="my_primary">#FF24D3FE</color>
+    <color name="favourite_red">#E64E4E</color>
+    <color name="favourite_red_darker">#8F2D2D</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

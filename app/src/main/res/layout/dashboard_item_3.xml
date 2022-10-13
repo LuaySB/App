@@ -9,8 +9,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="150sp"
-        android:layout_height="130sp"
+        android:layout_width="120sp"
+        android:layout_height="104sp"
         app:cardBackgroundColor="@color/dashboard_color"
         app:cardCornerRadius="0sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,55 +49,51 @@
             android:paddingBottom="16sp">
 
             <TextView
-                android:id="@+id/distanceToLidl"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1.6 km"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-            <TextView
                 android:id="@+id/textTitleLidl"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8sp"
-                android:layout_marginRight="8sp"
-                android:paddingLeft="99dp"
+                android:paddingLeft="80dp"
                 android:text="Lidl Kroppkärr"
                 android:textColor="@color/black"
-                android:textStyle="bold"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toStartOf="@id/distanceToLidl"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:paddingLeft="80dp"
                 android:paddingTop="20dp"
-                android:paddingLeft="99dp"
-                app:layout_constraintEnd_toStartOf="@id/distanceToLidl"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:text="Öppet idag 07:30-22:00"
-                android:textSize="12sp"
                 android:textColor="@color/black"
-                />
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:paddingLeft="80dp"
                 android:paddingTop="37dp"
-                android:paddingLeft="99dp"
-                app:layout_constraintEnd_toStartOf="@id/distanceToLidl"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:text="50 erbjudanden"
-                android:textSize="12sp"
                 android:textColor="@color/offers_text"
-                />
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/favouriteLidl"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:layout_marginEnd="24dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_baseline_favorite_border_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

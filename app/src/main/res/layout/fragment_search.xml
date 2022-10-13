@@ -50,12 +50,19 @@
 
             <include layout="@layout/dashboard_item_1" />
 
-            <Button
-                android:id="@+id/buttonIca"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Veckans Erbjudanden"
-                android:textAllCaps="false" />
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonIca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Veckans Erbjudanden"
+                    android:textAllCaps="false" />
+
+            </LinearLayout>
 
             <include layout="@layout/dashboard_item_2" />
 
