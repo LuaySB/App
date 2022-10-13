@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity{
                 case R.id.home:            replaceFragment(new HomeFragment());    break;
                 case R.id.search:          replaceFragment(new SearchFragment());  break;
                 case R.id.compare:         replaceFragment(new CompareFragment()); break;
-                case R.id.list_bulleted:   replaceFragment(new ListFragment());    break;
+                case R.id.list_bulleted:   replaceFragment(new CategoryFragment());    break;
             }
             return true;
         });
