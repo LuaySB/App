@@ -7,9 +7,9 @@
         android:icon="@drawable/ic_baseline_search_24"
         android:id="@+id/search"/>/>
     <item android:title="Jämför"
-        android:icon="@drawable/ic_baseline_compare_24"
+        android:icon="@drawable/ic_baseline_compare_arrows_24"
         android:id="@+id/compare"/>/>
-    <item android:title="Inköpslista"
+    <item android:title="Kategorier"
         android:icon="@drawable/ic_baseline_format_list_bulleted_24"
         android:id="@+id/list_bulleted"/>/>
 </menu>

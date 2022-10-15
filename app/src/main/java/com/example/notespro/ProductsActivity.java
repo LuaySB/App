@@ -72,7 +72,9 @@ public class ProductsActivity extends AppCompatActivity {
 
                         for (DocumentChange dc: value.getDocumentChanges()){
                             if (dc.getType() == DocumentChange.Type.ADDED){
-                                productsArrayList.add(dc.getDocument().toObject(Products.class));
+                                Products product = dc.getDocument().toObject(Products.class);
+                                product.setPrice(product.getPrice().replaceAll("[^.0123456789]",""));
+                                productsArrayList.add(product);
                             }
 
                             myAdapter.notifyDataSetChanged();
