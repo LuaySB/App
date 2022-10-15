@@ -37,7 +37,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="Category:"
+                    android:text="Kategori:"
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/product_kategori1"
                     android:layout_marginLeft="10dp"
-                    android:text="Product:"
+                    android:text="Produkt:"
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/product_name1"
                     android:layout_marginLeft="10dp"
-                    android:text="Price:"
+                    android:text="Pris:"
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/product_price1"
                     android:layout_marginLeft="10dp"
-                    android:text="Store:"
+                    android:text="Butik:"
                     android:textColor="@color/black"
                     android:textSize="14sp"
                     android:textStyle="bold" />
