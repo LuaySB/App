@@ -20,7 +20,8 @@
             android:text="Notes"
             android:textSize="32sp"
             android:textColor="@color/white"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:fontFamily="cursive"/>
 
         <ImageButton
             android:layout_width="36dp"

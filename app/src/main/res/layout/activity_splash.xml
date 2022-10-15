@@ -4,24 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/my_primary"
+    android:background="@drawable/food_background"
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".SplashActivity">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Foodcompare"
-        android:textSize="32sp"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        android:gravity="center"
-        />
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="32dp"
+        android:backgroundTintMode="add"
+        android:backgroundTint="#E640DBFF"
+        android:background="@drawable/background_border">
 
-    <ProgressBar
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:indeterminateTint="@color/white"
-        android:layout_margin="16dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp">
+
+            <TextView
+                android:id="@+id/splash_screen_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="cursive"
+                android:gravity="center_horizontal"
+                android:text="Foodcompare"
+                android:textColor="@color/white"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@+id/splash_screen_title"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:indeterminateTint="@color/white" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
 </LinearLayout>

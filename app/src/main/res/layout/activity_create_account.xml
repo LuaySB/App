@@ -42,8 +42,9 @@
                     android:layout_marginHorizontal="16dp"
                     android:gravity="center_vertical"
                     android:text="Create Account"
+                    android:fontFamily="cursive"
                     android:textColor="@color/black"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     android:textStyle="bold" />
 
 

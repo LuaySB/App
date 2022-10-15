@@ -19,7 +19,8 @@
             android:text="Q &amp; A"
             android:textColor="@color/white"
             android:textSize="32sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:fontFamily="cursive"/>
 
     </RelativeLayout>
 
@@ -38,7 +39,8 @@
             android:layout_marginBottom="24dp"
             android:textStyle="bold"
             android:text="Common questions:"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            android:fontFamily="cursive"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
