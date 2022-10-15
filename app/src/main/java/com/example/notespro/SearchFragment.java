@@ -1,6 +1,9 @@
 package com.example.notespro;
 
 
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
+
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,12 +13,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SearchFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class SearchFragment extends Fragment implements View.OnClickListener{
 
 
@@ -35,17 +34,19 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
     Button LidlButton;
     Button CoopKButton;
     Button CoopVButton;
+
+    ImageButton IcaLikeButton;
+    ImageButton LidlLikeButton;
+    ImageButton CoopKLikeButton;
+    ImageButton CoopVLikeButton;
+
+    ImageButton IcaLikedButton;
+    ImageButton LidlLikedButton;
+    ImageButton CoopKLikedButton;
+    ImageButton CoopVLikedButton;
+
     String store;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SearchFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static SearchFragment newInstance(String param1, String param2) {
         SearchFragment fragment = new SearchFragment();
         Bundle args = new Bundle();
@@ -63,8 +64,6 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
     }
 
 
@@ -72,7 +71,6 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         View view = inflater.inflate(R.layout.fragment_search, container, false);
         IcaButton = view.findViewById(R.id.buttonIca);
         IcaButton.setOnClickListener(this);
@@ -83,6 +81,23 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         CoopVButton = view.findViewById(R.id.buttonCoopV);
         CoopVButton.setOnClickListener(this);
 
+        IcaLikeButton = view.findViewById(R.id.likeIca);
+        IcaLikeButton.setOnClickListener(this);
+        LidlLikeButton = view.findViewById(R.id.likeLidl);
+        LidlLikeButton.setOnClickListener(this);
+        CoopKLikeButton = view.findViewById(R.id.likeCoopK);
+        CoopKLikeButton.setOnClickListener(this);
+        CoopVLikeButton = view.findViewById(R.id.likeCoopV);
+        CoopVLikeButton.setOnClickListener(this);
+
+        IcaLikedButton = view.findViewById(R.id.likedIca);
+        IcaLikedButton.setOnClickListener(this);
+        LidlLikedButton = view.findViewById(R.id.likedLidl);
+        LidlLikedButton.setOnClickListener(this);
+        CoopKLikedButton = view.findViewById(R.id.likedCoopK);
+        CoopKLikedButton.setOnClickListener(this);
+        CoopVLikedButton = view.findViewById(R.id.likedCoopV);
+        CoopVLikedButton.setOnClickListener(this);
 
         return view;
     }
@@ -107,7 +122,39 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
             Intent intent = new Intent(getActivity(), ProductsActivity.class);
             intent.putExtra("store", "coop välsviken");
             startActivity(intent);
+            }
+        else if(v.getId() == R.id.likeIca){
+            IcaLikeButton.setVisibility(GONE);
+            IcaLikedButton.setVisibility(VISIBLE);
+            }
+        else if(v.getId() == R.id.likeLidl){
+            LidlLikeButton.setVisibility(GONE);
+            LidlLikedButton.setVisibility(VISIBLE);
+            }
+        else if(v.getId() == R.id.likeCoopK){
+            CoopKLikeButton.setVisibility(GONE);
+            CoopKLikedButton.setVisibility(VISIBLE);
+            }
+        else if(v.getId() == R.id.likeCoopV){
+            CoopVLikeButton.setVisibility(GONE);
+            CoopVLikedButton.setVisibility(VISIBLE);
+            }
+        else if(v.getId() == R.id.likedIca){
+            IcaLikeButton.setVisibility(VISIBLE);
+            IcaLikedButton.setVisibility(GONE);
+            }
+        else if(v.getId() == R.id.likedLidl){
+            LidlLikeButton.setVisibility(VISIBLE);
+            LidlLikedButton.setVisibility(GONE);
+            }
+        else if(v.getId() == R.id.likedCoopK){
+            CoopKLikeButton.setVisibility(VISIBLE);
+            CoopKLikedButton.setVisibility(GONE);
+            }
+        else if(v.getId() == R.id.likedCoopV){
+            CoopVLikeButton.setVisibility(VISIBLE);
+            CoopVLikedButton.setVisibility(GONE);
         }else
             return;
-}
+    }
 }
