@@ -2,6 +2,7 @@ package com.example.notespro;
 
 import android.content.Context;
 import android.graphics.BitmapFactory;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,11 +46,28 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         holder.kategori.setText(product.kategori);
         holder.name.setText(product.offer);
         holder.pre.setText(product.pre);
-        holder.price.setText(product.price);
         holder.store.setText(product.store);
 
-        Glide.with(context).load(product.image).into(holder.image);
+        //Setting Price to Product
+        if(product.price.endsWith(":-") || product.price.endsWith("kr")){
+            holder.price.setText(product.price);
+        }else{
+            holder.price.setText(product.price + ":-");
+        }
 
+        //Setting Image to Product
+        if(product.store.equals("Coop Kronoparken")){
+            Glide.with(context).load("https:" + product.image).into(holder.image);
+
+        }else if(product.store.equals("Stora Coop välsviken")) {
+            Glide.with(context).load("https:" + product.image).into(holder.image);
+
+        }else if(product.store.equals("Lidl")) {
+            holder.image.setImageResource(R.drawable.lidllogo);
+
+        }else{
+            Glide.with(context).load(product.image).into(holder.image);
+        }
     }
 
     @Override
@@ -71,8 +89,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
             price = itemView.findViewById(R.id.product_price);
             store = itemView.findViewById(R.id.product_store);
             image = itemView.findViewById(R.id.product_img);
-
-
         }
     }
 }
