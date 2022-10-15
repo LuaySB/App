@@ -5,17 +5,18 @@ import com.google.firebase.firestore.IgnoreExtraProperties;
 @IgnoreExtraProperties
 public class Products {
 
-    String offer, store, price, pre, kategori;
+    String offer, store, price, pre, kategori, image;
 
     public Products(){}
 
 
-    public Products(String offer, String store, String price, String pre, String kategori) {
+    public Products(String offer, String store, String price, String pre, String kategori, String image) {
         this.offer = offer;
         this.store = store;
         this.price = price;
         this.pre = pre;
         this.kategori = kategori;
+        this.image = image;
     }
 
     public String getOffer() {
@@ -56,5 +57,13 @@ public class Products {
 
     public void setKategori(String kategori) {
         this.kategori = kategori;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
