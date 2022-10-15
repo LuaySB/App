@@ -11,11 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link SearchFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class SearchFragment extends Fragment implements View.OnClickListener{
 
 
@@ -37,15 +32,6 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
     Button CoopVButton;
     String store;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment SearchFragment.
-     */
-    // TODO: Rename and change types and number of parameters
     public static SearchFragment newInstance(String param1, String param2) {
         SearchFragment fragment = new SearchFragment();
         Bundle args = new Bundle();
@@ -63,8 +49,6 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-
-
     }
 
 
@@ -72,7 +56,6 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
         View view = inflater.inflate(R.layout.fragment_search, container, false);
         IcaButton = view.findViewById(R.id.buttonIca);
         IcaButton.setOnClickListener(this);
@@ -82,7 +65,6 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
         CoopKButton.setOnClickListener(this);
         CoopVButton = view.findViewById(R.id.buttonCoopV);
         CoopVButton.setOnClickListener(this);
-
 
         return view;
     }

@@ -54,9 +54,9 @@ public class ProductsActivity extends AppCompatActivity {
 
     private void EventChangeListener() {
 
+        Log.d("MyTag", "Entering store: " + store);
 
-
-        db.collection(store).orderBy("price", Query.Direction.ASCENDING)
+        db.collection(store).orderBy("kategori", Query.Direction.ASCENDING)
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
                     @Override
                     public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
@@ -80,9 +80,7 @@ public class ProductsActivity extends AppCompatActivity {
                                 progressDialog.dismiss();
 
                         }
-
                     }
                 });
-
     }
 }
