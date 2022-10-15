@@ -110,7 +110,8 @@
                     android:layout_below="@+id/product_name"
                     android:layout_marginStart="8dp"
                     android:text="2 för"
-                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    android:textColor="@color/red"
                     android:textSize="14sp" />
 
                 <TextView
@@ -121,7 +122,8 @@
                     android:layout_marginStart="4dp"
                     android:layout_toRightOf="@+id/product_pre"
                     android:text="50 kr"
-                    android:textColor="@color/black"
+                    android:textStyle="italic"
+                    android:textColor="@color/red"
                     android:textSize="14sp" />
 
                 <TextView
