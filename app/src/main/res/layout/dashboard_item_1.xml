@@ -84,22 +84,23 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/favouriteIca"
+                android:id="@+id/likeIca"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="@color/white"
                 android:src="@drawable/ic_baseline_favorite_border_24"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/favouritedIca"
+                android:id="@+id/likedIca"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:background="@color/white"
                 android:src="@drawable/ic_baseline_favorite_24"
-                android:visibility="visible"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

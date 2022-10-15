@@ -84,26 +84,27 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/favouriteCoopKronoparken"
+                android:id="@+id/likeCoopK"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
                 android:layout_marginEnd="24dp"
                 android:background="@color/white"
                 android:src="@drawable/ic_baseline_favorite_border_24"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/favouritedCoopKronoparken"
+                android:id="@+id/likedCoopK"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
                 android:layout_marginEnd="24dp"
                 android:background="@color/white"
                 android:src="@drawable/ic_baseline_favorite_24"
-                android:visibility="invisible"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
