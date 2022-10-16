@@ -58,6 +58,7 @@
                     android:id="@+id/buttonIca"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:backgroundTint="@color/favourite_red"
                     android:text="Veckans Erbjudanden"
                     android:textAllCaps="false" />
 
@@ -70,6 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Veckans Erbjudanden"
+                android:backgroundTint="@color/coop_green"
                 android:textAllCaps="false" />
 
 
@@ -80,6 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Veckans Erbjudanden"
+                android:backgroundTint="@color/lidl_blue"
                 android:textAllCaps="false" />
 
 
@@ -89,6 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Veckans Erbjudanden"
+                android:backgroundTint="@color/coop_green"
                 android:textAllCaps="false" />
 
 
