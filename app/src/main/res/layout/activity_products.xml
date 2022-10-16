@@ -6,27 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".ProductsActivity">
 
-    <TextView
-        android:id="@+id/products_title"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/my_primary"
-        android:padding="16dp"
-        android:text="Produkter"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:fontFamily="cursive"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/recyclerView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/products_title" />
+        <TextView
+            android:id="@+id/products_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/my_primary"
+            android:padding="16dp"
+            android:text="Produkter"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:fontFamily="cursive"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/products_title"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
