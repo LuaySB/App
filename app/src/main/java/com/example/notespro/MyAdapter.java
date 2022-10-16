@@ -44,19 +44,26 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
         Product product = products.get(position);
 
-        holder.kategori.setText(product.kategori);
+        //Namn, Prefix och Affär från databas till view-objekt
         holder.name.setText(product.offer);
         holder.pre.setText(product.pre);
         holder.store.setText(product.store);
 
-        //Setting Price to Product
+        //Korregeringar Kategori
+        if(product.kategori.equals("None")){
+            holder.kategori.setText("Övrigt");
+        }else{
+            holder.kategori.setText(product.kategori);
+        }
+
+        //Korregeringar Pris
         if(product.price.endsWith(":-") || product.price.endsWith("kr")){
             holder.price.setText(product.price);
         }else{
             holder.price.setText(product.price + ":-");
         }
 
-        //Setting Image to Product
+        //Hämta bild för display
         if(product.store.equals("Coop Kronoparken")){
             Glide.with(context).load("https:" + product.image).into(holder.image);
 

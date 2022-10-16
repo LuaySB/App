@@ -38,14 +38,6 @@ public class CategoryFragment extends Fragment implements View.OnClickListener{
     Button button6;
     Button button7;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment ListFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static CategoryFragment newInstance(String param1, String param2) {
         CategoryFragment fragment = new CategoryFragment();
@@ -112,6 +104,10 @@ public class CategoryFragment extends Fragment implements View.OnClickListener{
         else if (v.getId() == R.id.buttonCategory5) {
             Intent intent = new Intent(getActivity(), CategoryActivity.class);
             intent.putExtra("kategori", "SKAFFERI");
+            startActivity(intent);
+        }else if (v.getId() == R.id.buttonCategory6) {
+            Intent intent = new Intent(getActivity(), CategoryActivity.class);
+            intent.putExtra("kategori", "None");
             startActivity(intent);
         }
     }
