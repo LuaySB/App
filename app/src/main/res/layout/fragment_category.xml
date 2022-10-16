@@ -31,100 +31,112 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textTitle"
-        android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp">
 
         <Button
             android:id="@+id/buttonCategory1"
             android:layout_width="160dp"
             android:layout_height="80dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/custom_button"
             android:text="Frukt &amp; Grönt"
-            android:textStyle="bold"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonCategory2"
             android:layout_width="160dp"
             android:layout_height="80dp"
-            android:text="Färskvaror"
-            android:textStyle="bold"
+            android:layout_margin="16dp"
             android:layout_toRightOf="@id/buttonCategory1"
-            android:layout_marginLeft="20dp"
+            android:background="@drawable/custom_button"
+            android:text="Färskvaror"
             android:textAllCaps="false"
-            android:background="@drawable/custom_button" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonCategory3"
             android:layout_width="160dp"
             android:layout_height="80dp"
-            android:text="Mejeri"
-            android:textStyle="bold"
             android:layout_below="@id/buttonCategory1"
-            android:layout_marginTop="30dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_button"
+            android:text="Mejeri"
             android:textAllCaps="false"
-            android:background="@drawable/custom_button" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonCategory4"
             android:layout_width="160dp"
             android:layout_height="80dp"
-            android:text="Kött, Fågel &amp; Fisk"
-            android:textStyle="bold"
             android:layout_below="@id/buttonCategory1"
+            android:layout_margin="16dp"
             android:layout_toRightOf="@id/buttonCategory3"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="20dp"
+            android:background="@drawable/custom_button"
+            android:text="Kött, Fågel &amp; Fisk"
             android:textAllCaps="false"
-            android:background="@drawable/custom_button" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonCategory5"
             android:layout_width="160dp"
             android:layout_height="80dp"
-            android:text="Skafferi"
-            android:textStyle="bold"
             android:layout_below="@id/buttonCategory3"
-            android:layout_marginTop="30dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_button"
+            android:text="Skafferi"
             android:textAllCaps="false"
-            android:background="@drawable/custom_button" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/buttonCategory6"
             android:layout_width="160dp"
             android:layout_height="80dp"
-            android:text="Kategori 6"
-            android:textStyle="bold"
             android:layout_below="@id/buttonCategory3"
+            android:layout_margin="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:layout_toRightOf="@id/buttonCategory5"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="20dp"
+            android:background="@drawable/custom_button"
+            android:text="Kategori 6"
             android:textAllCaps="false"
-            android:background="@drawable/custom_button" />
+            android:textStyle="bold"
+            android:visibility="gone"/>
 
         <Button
             android:id="@+id/buttonCategory7"
             android:layout_width="160dp"
             android:layout_height="80dp"
-            android:text="Kategori 7"
-            android:textStyle="bold"
             android:layout_below="@id/buttonCategory5"
-            android:layout_marginTop="30dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_button"
+            android:text="Kategori 7"
             android:textAllCaps="false"
-            android:background="@drawable/custom_button" />
+            android:textStyle="bold"
+            android:visibility="gone"/>
 
         <Button
             android:id="@+id/buttonCategory8"
             android:layout_width="160dp"
             android:layout_height="80dp"
-            android:text="Kategori 8"
-            android:textStyle="bold"
             android:layout_below="@id/buttonCategory5"
+            android:layout_margin="16dp"
             android:layout_toRightOf="@id/buttonCategory7"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="20dp"
+            android:background="@drawable/custom_button"
+            android:text="Kategori 8"
             android:textAllCaps="false"
-            android:background="@drawable/custom_button" />
+            android:textStyle="bold"
+            android:visibility="gone"/>
 
     </RelativeLayout>
 
