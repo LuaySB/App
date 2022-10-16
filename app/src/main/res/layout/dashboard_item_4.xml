@@ -4,15 +4,16 @@
     android:layout_height="wrap_content"
     android:id="@+id/coopKronoparken"
     android:layout_marginTop="18dp"
-    android:background="@color/dashboard_color"
+    android:background="@drawable/rounded_corner_white"
     app:circularflow_defaultRadius="16dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="120sp"
-        android:layout_height="104sp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_margin="6dp"
         app:cardBackgroundColor="@color/dashboard_color"
-        app:cardCornerRadius="0sp"
+        app:cardCornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,7 +21,6 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="2sp"
             android:src="@drawable/coopkronoparken">
 
         </androidx.appcompat.widget.AppCompatImageView>
@@ -32,7 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16sp"
         android:layout_marginLeft="16sp"
-        app:cardBackgroundColor="@color/dashboard_color"
+        app:cardBackgroundColor="@color/empty"
         app:cardCornerRadius="16sp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,7 +89,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
                 android:layout_marginEnd="24dp"
-                android:background="@color/white"
+                android:background="@color/empty"
                 android:src="@drawable/ic_baseline_favorite_border_24"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -102,7 +102,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
                 android:layout_marginEnd="24dp"
-                android:background="@color/white"
+                android:background="@color/empty"
                 android:src="@drawable/ic_baseline_favorite_24"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"

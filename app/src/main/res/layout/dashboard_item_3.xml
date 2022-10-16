@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lidlKroppkarr"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/lidlKroppkarr"
     android:layout_marginTop="18dp"
-    android:background="@color/dashboard_color"
-    app:circularflow_defaultRadius="16dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="@drawable/rounded_corner_white"
+    app:circularflow_defaultRadius="16dp">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="120sp"
-        android:layout_height="104sp"
-        app:cardBackgroundColor="@color/dashboard_color"
-        app:cardCornerRadius="0sp"
+        android:layout_height="120sp"
+        android:layout_margin="6dp"
+        app:cardBackgroundColor="@color/empty"
+        app:cardCornerRadius="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,7 +21,7 @@
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="2sp"
+            android:background="@color/empty"
             android:src="@drawable/lidllogo">
 
         </androidx.appcompat.widget.AppCompatImageView>
@@ -32,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16sp"
         android:layout_marginLeft="16sp"
-        app:cardBackgroundColor="@color/dashboard_color"
+        app:cardBackgroundColor="@color/empty"
         app:cardCornerRadius="16sp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,7 +90,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
                 android:layout_marginEnd="24dp"
-                android:background="@color/white"
+                android:background="@color/empty"
                 android:src="@drawable/ic_baseline_favorite_border_24"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -102,7 +103,7 @@
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
                 android:layout_marginEnd="24dp"
-                android:background="@color/white"
+                android:background="@color/empty"
                 android:src="@drawable/ic_baseline_favorite_24"
                 android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -111,6 +112,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </com.google.android.material.card.MaterialCardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

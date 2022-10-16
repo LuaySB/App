@@ -110,11 +110,9 @@ public class CompareFragment extends Fragment{
             }
         }
 
-        if(filteredList.isEmpty()){
+        if(filteredList.isEmpty())
             Toast.makeText(this.getActivity(), "Hitta inga varor", Toast.LENGTH_SHORT).show();
-        }else{
-            myAdapter.setFilteredList(filteredList);
-        }
+        myAdapter.setFilteredList(filteredList);
 
     }
 

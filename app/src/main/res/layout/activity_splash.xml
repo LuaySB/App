@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/food_background"
+    android:background="@color/my_primary_90op"
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".SplashActivity">
@@ -12,11 +12,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
-        android:layout_margin="32dp"
-        android:backgroundTintMode="add"
-        android:backgroundTint="@color/my_primary_90op"
-        android:background="@drawable/background_border">
+        android:layout_gravity="center">
 
         <RelativeLayout
             android:layout_width="match_parent"

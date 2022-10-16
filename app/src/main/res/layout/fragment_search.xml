@@ -38,6 +38,7 @@
         android:overScrollMode="never"
         android:padding="16dp"
         android:scrollbars="none"
+        android:background="@drawable/sharp_corner_cardbord_90"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/viewHeaderBackground">
 
@@ -58,7 +59,7 @@
                     android:id="@+id/buttonIca"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/card_background"
+                    android:backgroundTint="@color/white"
                     android:text="Se Erbjudanden"
                     android:textColor="@color/favourite_red"
                     android:textAllCaps="false" />
@@ -71,7 +72,7 @@
                 android:id="@+id/buttonCoopV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/card_background"
+                android:backgroundTint="@color/card_background_90"
                 android:text="Se Erbjudanden"
                 android:textColor="@color/favourite_red"
                 android:textAllCaps="false" />
@@ -83,7 +84,7 @@
                 android:id="@+id/buttonLidl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/card_background"
+                android:backgroundTint="@color/card_background_90"
                 android:text="Se Erbjudanden"
                 android:textColor="@color/favourite_red"
                 android:textAllCaps="false" />
@@ -94,7 +95,7 @@
                 android:id="@+id/buttonCoopK"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/card_background"
+                android:backgroundTint="@color/card_background_90"
                 android:text="Se Erbjudanden"
                 android:textColor="@color/favourite_red"
                 android:textAllCaps="false" />
