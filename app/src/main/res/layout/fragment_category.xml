@@ -100,7 +100,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="8dp"
                     android:background="@drawable/custom_button"
-                    android:text="Kategori 6"
+                    android:text="Övrigt"
                     android:textAllCaps="false" />
 
                 <Button
