@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/text_view"
-        android:text="Compare Food"
+        android:text="Sök Efter Produkter"
         android:background="@color/my_primary"
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -18,13 +18,26 @@
         android:fontFamily="cursive"
         android:padding="16dp"/>
 
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_view_bg"
+        android:layout_below="@id/text_view"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        app:queryHint="Sök..."
+        app:iconifiedByDefault="false"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/product_list"
-        android:layout_below="@+id/text_view"
-        tools:listitem="@layout/item"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchView"
+        tools:listitem="@layout/item" />
 
 
 

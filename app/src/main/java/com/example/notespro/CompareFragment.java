@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,8 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
@@ -24,15 +24,18 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CompareFragment extends Fragment{
 
     RecyclerView productList;
-    ArrayList<Products> productsArrayList;
+    ArrayList<Product> products;
     MyAdapter myAdapter;
     FirebaseFirestore db;
     ProgressDialog progressDialog;
     String[] stores = {"coop kronoparken", "coop välsviken", "ica", "lidl"};
+
+    SearchView searchview;
 
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -69,6 +72,21 @@ public class CompareFragment extends Fragment{
 
         View view = inflater.inflate(R.layout.fragment_compare, container, false);
 
+        searchview = view.findViewById(R.id.searchView);
+        searchview.clearFocus();
+        searchview.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterList(newText);
+                return true;
+            }
+        });
+
         progressDialog = new ProgressDialog(this.getActivity());
         progressDialog.setCancelable(false);
         progressDialog.setMessage("Fetching Data...");
@@ -79,14 +97,31 @@ public class CompareFragment extends Fragment{
         productList.setLayoutManager(new LinearLayoutManager(this.getActivity()));
 
         db = FirebaseFirestore.getInstance();
-        productsArrayList = new ArrayList<Products>();
-        myAdapter = new MyAdapter(CompareFragment.this.getContext(), productsArrayList);
+        products = new ArrayList<Product>();
+        myAdapter = new MyAdapter(CompareFragment.this.getContext(), products);
 
         productList.setAdapter(myAdapter);
 
         EventChangeListener();
 
         return view;
+
+    }
+
+    private void filterList(String text) {
+
+        List<Product> filteredList = new ArrayList<>();
+        for(Product product: products){
+            if(product.getOffer().toLowerCase().contains(text.toLowerCase())){
+                filteredList.add(product);
+            }
+        }
+
+        if(filteredList.isEmpty()){
+            Toast.makeText(this.getActivity(), "Hitta inga varor", Toast.LENGTH_SHORT).show();
+        }else{
+            myAdapter.setFilteredList(filteredList);
+        }
 
     }
 
@@ -119,7 +154,7 @@ public class CompareFragment extends Fragment{
 
                             for (DocumentChange dc: value.getDocumentChanges()){
                                 if (dc.getType() == DocumentChange.Type.ADDED){
-                                    productsArrayList.add(dc.getDocument().toObject(Products.class));
+                                    products.add(dc.getDocument().toObject(Product.class));
                                 }
 
                                 myAdapter.notifyDataSetChanged();

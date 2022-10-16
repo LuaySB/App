@@ -3,14 +3,14 @@ package com.example.notespro;
 import com.google.firebase.firestore.IgnoreExtraProperties;
 
 @IgnoreExtraProperties
-public class Products {
+public class Product {
 
     String offer, store, price, pre, kategori, image;
 
-    public Products(){}
+    public Product(){}
 
 
-    public Products(String offer, String store, String price, String pre, String kategori, String image) {
+    public Product(String offer, String store, String price, String pre, String kategori, String image) {
         this.offer = offer;
         this.store = store;
         this.price = price;

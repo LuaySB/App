@@ -1,8 +1,6 @@
 package com.example.notespro;
 
 import android.content.Context;
-import android.graphics.BitmapFactory;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,19 +12,22 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
     Context context;
-    ArrayList<Products> productsArrayList;
+    ArrayList<Product> products;
 
-    public MyAdapter(Context context, ArrayList<Products> productsArrayList) {
+    public void setFilteredList(List<Product> filteredList){
+        this.products = (ArrayList<Product>) filteredList;
+        notifyDataSetChanged();
+    }
+
+    public MyAdapter(Context context, ArrayList<Product> products) {
         this.context = context;
-        this.productsArrayList = productsArrayList;
+        this.products = products;
     }
 
     @NonNull
@@ -41,7 +42,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull MyAdapter.MyViewHolder holder, int position) {
 
-        Products product = productsArrayList.get(position);
+        Product product = products.get(position);
 
         holder.kategori.setText(product.kategori);
         holder.name.setText(product.offer);
@@ -72,7 +73,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
     @Override
     public int getItemCount() {
-        return productsArrayList.size();
+        return products.size();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{

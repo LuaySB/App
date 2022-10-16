@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class CategoryActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    ArrayList<Products> productsArrayList;
+    ArrayList<Product> productArrayList;
     MyAdapter myAdapter;
     FirebaseFirestore db;
     ProgressDialog progressDialog;
@@ -44,8 +44,8 @@ public class CategoryActivity extends AppCompatActivity {
         kategori = getIntent().getStringExtra("kategori");
 
         db = FirebaseFirestore.getInstance();
-        productsArrayList = new ArrayList<Products>();
-        myAdapter = new MyAdapter(CategoryActivity.this, productsArrayList);
+        productArrayList = new ArrayList<Product>();
+        myAdapter = new MyAdapter(CategoryActivity.this, productArrayList);
 
         recyclerView.setAdapter(myAdapter);
 
@@ -72,9 +72,9 @@ public class CategoryActivity extends AppCompatActivity {
 
                         for (DocumentChange dc: value.getDocumentChanges()){
                             if (dc.getType() == DocumentChange.Type.ADDED){
-                                Products product = dc.getDocument().toObject(Products.class);
+                                Product product = dc.getDocument().toObject(Product.class);
                                 product.setPrice(product.getPrice().replaceAll("[^.0123456789]",""));
-                                productsArrayList.add(product);
+                                productArrayList.add(product);
                             }
 
                             myAdapter.notifyDataSetChanged();
@@ -101,9 +101,9 @@ public class CategoryActivity extends AppCompatActivity {
 
                         for (DocumentChange dc: value.getDocumentChanges()){
                             if (dc.getType() == DocumentChange.Type.ADDED){
-                                Products product = dc.getDocument().toObject(Products.class);
+                                Product product = dc.getDocument().toObject(Product.class);
                                 product.setPrice(product.getPrice().replaceAll("[^.0123456789]",""));
-                                productsArrayList.add(product);
+                                productArrayList.add(product);
                             }
 
                             myAdapter.notifyDataSetChanged();
@@ -130,9 +130,9 @@ public class CategoryActivity extends AppCompatActivity {
 
                         for (DocumentChange dc: value.getDocumentChanges()){
                             if (dc.getType() == DocumentChange.Type.ADDED){
-                                Products product = dc.getDocument().toObject(Products.class);
+                                Product product = dc.getDocument().toObject(Product.class);
                                 product.setPrice(product.getPrice().replaceAll("[^.0123456789]",""));
-                                productsArrayList.add(product);
+                                productArrayList.add(product);
                             }
 
                             myAdapter.notifyDataSetChanged();
@@ -159,9 +159,9 @@ public class CategoryActivity extends AppCompatActivity {
 
                         for (DocumentChange dc: value.getDocumentChanges()){
                             if (dc.getType() == DocumentChange.Type.ADDED){
-                                Products product = dc.getDocument().toObject(Products.class);
+                                Product product = dc.getDocument().toObject(Product.class);
                                 product.setPrice(product.getPrice().replaceAll("[^.0123456789]",""));
-                                productsArrayList.add(product);
+                                productArrayList.add(product);
                             }
 
                             myAdapter.notifyDataSetChanged();

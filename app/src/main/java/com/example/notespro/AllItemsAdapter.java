@@ -14,14 +14,14 @@ import java.util.ArrayList;
 public class AllItemsAdapter extends RecyclerView.Adapter<AllItemsAdapter.AllItemsViewHolder> {
 
     Context context;
-    ArrayList<Products> productsArrayList;
+    ArrayList<Product> productArrayList;
 
 
 
-    public AllItemsAdapter(Context context, ArrayList<Products> productsArrayList){
+    public AllItemsAdapter(Context context, ArrayList<Product> productArrayList){
 
         this.context = context;
-        this.productsArrayList = productsArrayList;
+        this.productArrayList = productArrayList;
 
     }
 
@@ -36,7 +36,7 @@ public class AllItemsAdapter extends RecyclerView.Adapter<AllItemsAdapter.AllIte
     @Override
     public void onBindViewHolder(@NonNull AllItemsAdapter.AllItemsViewHolder holder, int position) {
 
-        Products product = productsArrayList.get(position);
+        Product product = productArrayList.get(position);
 
         holder.kategori.setText(product.kategori);
         holder.name.setText(product.offer);
@@ -48,7 +48,7 @@ public class AllItemsAdapter extends RecyclerView.Adapter<AllItemsAdapter.AllIte
 
     @Override
     public int getItemCount() {
-        return productsArrayList.size();
+        return productArrayList.size();
     }
 
     public static class AllItemsViewHolder extends RecyclerView.ViewHolder{
