@@ -58,8 +58,9 @@
                     android:id="@+id/buttonIca"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/favourite_red"
-                    android:text="Veckans Erbjudanden"
+                    android:backgroundTint="@color/card_background"
+                    android:text="Se Erbjudanden"
+                    android:textColor="@color/favourite_red"
                     android:textAllCaps="false" />
 
             </LinearLayout>
@@ -70,8 +71,9 @@
                 android:id="@+id/buttonCoopV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Veckans Erbjudanden"
-                android:backgroundTint="@color/favourite_red"
+                android:backgroundTint="@color/card_background"
+                android:text="Se Erbjudanden"
+                android:textColor="@color/favourite_red"
                 android:textAllCaps="false" />
 
 
@@ -81,8 +83,9 @@
                 android:id="@+id/buttonLidl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Veckans Erbjudanden"
-                android:backgroundTint="@color/favourite_red"
+                android:backgroundTint="@color/card_background"
+                android:text="Se Erbjudanden"
+                android:textColor="@color/favourite_red"
                 android:textAllCaps="false" />
 
 
@@ -91,8 +94,9 @@
                 android:id="@+id/buttonCoopK"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Veckans Erbjudanden"
-                android:backgroundTint="@color/favourite_red"
+                android:backgroundTint="@color/card_background"
+                android:text="Se Erbjudanden"
+                android:textColor="@color/favourite_red"
                 android:textAllCaps="false" />
 
 
