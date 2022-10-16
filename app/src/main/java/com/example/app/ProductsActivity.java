@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
+
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -15,6 +17,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ProductsActivity extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -23,6 +26,7 @@ public class ProductsActivity extends AppCompatActivity {
     FirebaseFirestore db;
     ProgressDialog progressDialog;
     String store;
+    TextView productsTitle;
 
 
     @Override
@@ -46,6 +50,10 @@ public class ProductsActivity extends AppCompatActivity {
         myAdapter = new MyAdapter(ProductsActivity.this, products);
 
         recyclerView.setAdapter(myAdapter);
+
+        //Sätt titel på sida
+        productsTitle = findViewById(R.id.products_title);
+        productsTitle.setText(store.substring(0, 1).toUpperCase() + store.substring(1).toLowerCase());
 
         EventChangeListener();
     }
