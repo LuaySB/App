@@ -15,8 +15,8 @@
         android:paddingHorizontal="16dp">
 
         <ImageView
-            android:layout_width="128dp"
-            android:layout_height="128dp"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
             android:id="@+id/login_icon"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="46dp"
@@ -33,11 +33,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Welcome Back"
+                android:text="Välkommen tillbaka"
                 android:textAlignment="center"
                 android:fontFamily="cursive"
                 android:textColor="@color/black"
-                android:textSize="42sp"
+                android:textSize="36sp"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/email_edit_text"
                 android:inputType="textEmailAddress"
-                android:hint="Email ID"
+                android:hint="Email"
                 android:textColorHint="@color/gray"
                 android:textSize="20sp"
                 android:textColor="@color/black"
@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/password_edit_text"
                 android:inputType="textPassword"
-                android:hint="Password"
+                android:hint="Lösenord"
                 android:textColorHint="@color/gray"
                 android:textColor="@color/black"
                 android:textSize="20sp"
@@ -80,7 +80,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
                 android:id="@+id/login_btn"
-                android:text="Login"
+                android:text="Logga in"
                 android:textAllCaps="false"
                 android:layout_marginTop="12dp"
                 android:textSize="16sp"/>
@@ -105,14 +105,14 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have an account? "
+                android:text="Inget konto? "
                 android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/create_account_text_view_btn"
-                android:text="Create Account"
+                android:text="Skapa Konto"
                 android:textColor="@color/black"
                 android:textStyle="bold" />
 

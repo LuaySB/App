@@ -82,7 +82,7 @@
                     android:layout_gravity="center"
                     android:fontFamily="cursive"
                     android:padding="32dp"
-                    android:text="Denna app är designad för dig som vill se vilka erbjudande som finns i dina butiker lokalti Karlstad. Du kan klicka på ikonerna i meny-baren under och börja leta erbjudanden!"
+                    android:text="Denna app är designad för dig som vill se vilka erbjudande som finns i dina butiker lokalt i Karlstad. Du kan klicka på ikonerna i meny-baren under och börja leta erbjudanden!"
                     android:textAlignment="center"
                     android:textSize="24sp" />
 
