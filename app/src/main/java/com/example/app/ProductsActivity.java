@@ -53,7 +53,7 @@ public class ProductsActivity extends AppCompatActivity {
 
         //Sätt titel på sida
         productsTitle = findViewById(R.id.products_title);
-        productsTitle.setText(store.substring(0, 1).toUpperCase() + store.substring(1).toLowerCase());
+        productsTitle.setText("Butik: " + store.substring(0, 1).toUpperCase() + store.substring(1).toLowerCase());
 
         EventChangeListener();
     }

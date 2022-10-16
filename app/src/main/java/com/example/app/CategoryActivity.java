@@ -53,9 +53,9 @@ public class CategoryActivity extends AppCompatActivity {
         //Sätt titel på sida
         productsTitle = findViewById(R.id.products_title);
         if(kategori.equals("None")){
-            productsTitle.setText("Övrigt");
+            productsTitle.setText("Kategori: Övrigt");
         }else{
-            productsTitle.setText(kategori.substring(0, 1).toUpperCase() + kategori.substring(1).toLowerCase());
+            productsTitle.setText("Kategori: " + kategori.substring(0, 1).toUpperCase() + kategori.substring(1).toLowerCase());
         }
 
         EventChangeListener();

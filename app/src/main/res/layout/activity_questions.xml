@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/food_background_xml"
+    android:background="@drawable/my_background_xml"
     android:padding="16dp">
 
     <RelativeLayout
@@ -62,7 +62,7 @@
                     android:id="@+id/answer1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="24dp"
                     android:text="Hittils finns det 4 affärer att välja mellan: Ica Maxi Välsviken, Stora Coop Välsviken, Lidl Kroppkärr and Coop Kronoparken. Fler affärer kan komma i framtiden"/>
 
                 <TextView
@@ -77,7 +77,7 @@
                     android:id="@+id/answer2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="24dp"
                     android:text="Just nu har vi bara affärer i Karlstad. Det kan komma fler affärer i framtiden"/>
 
                 <TextView
@@ -92,7 +92,7 @@
                     android:id="@+id/answer3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="24dp"
                     android:text="Om du har tur så finns det erbjudande på kattmat. Gå in på sökfunktionen och skriv kattmat"/>
 
                 <TextView
@@ -107,7 +107,7 @@
                     android:id="@+id/answer4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="24dp"
                     android:text="De uppdateras direkt butikerna uppdaterar sina erbjudanden. Så länge våra servrar är uppe"/>
 
                 <TextView
@@ -122,7 +122,7 @@
                     android:id="@+id/answer5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginBottom="24dp"
                     android:text="Har du ett ICA Kort sedan tidigare kan du beställa nytt kort direkt under &quot;Ditt konto&quot; (kräver inloggning) som du når under ditt namn längst upp till höger på sidan. Du kan även kontakta ICA Kundservice på telefon 033-47 47 90."/>
 
             </LinearLayout>
