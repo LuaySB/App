@@ -56,7 +56,9 @@
                 android:id="@+id/email_edit_text"
                 android:inputType="textEmailAddress"
                 android:hint="Email ID"
+                android:textColorHint="@color/gray"
                 android:textSize="20sp"
+                android:textColor="@color/black"
                 android:background="@drawable/rounded_corner"
                 android:padding="16dp"
                 android:layout_marginTop="12dp"/>
@@ -67,6 +69,8 @@
                 android:id="@+id/password_edit_text"
                 android:inputType="textPassword"
                 android:hint="Password"
+                android:textColorHint="@color/gray"
+                android:textColor="@color/black"
                 android:textSize="20sp"
                 android:background="@drawable/rounded_corner"
                 android:padding="16dp"
@@ -77,6 +81,7 @@
                 android:layout_height="64dp"
                 android:id="@+id/login_btn"
                 android:text="Login"
+                android:textAllCaps="false"
                 android:layout_marginTop="12dp"
                 android:textSize="16sp"/>
 
@@ -100,14 +105,16 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have an account? "/>
+                android:text="Don't have an account? "
+                android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/create_account_text_view_btn"
-                android:textStyle="bold"
-                android:text="Create Account"/>
+                android:text="Create Account"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
 
         </LinearLayout>
     </RelativeLayout>
