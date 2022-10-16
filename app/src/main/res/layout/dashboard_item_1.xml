@@ -90,7 +90,6 @@
                 android:background="@color/white"
                 android:src="@drawable/ic_baseline_favorite_border_24"
                 android:visibility="visible"
-                app:tint="@color/ica_red"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -102,7 +101,6 @@
                 android:background="@color/white"
                 android:src="@drawable/ic_baseline_favorite_24"
                 android:visibility="gone"
-                app:tint="@color/ica_red"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

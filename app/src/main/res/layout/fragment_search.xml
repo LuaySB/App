@@ -71,7 +71,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Veckans Erbjudanden"
-                android:backgroundTint="@color/coop_green"
+                android:backgroundTint="@color/favourite_red"
                 android:textAllCaps="false" />
 
 
@@ -82,7 +82,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Veckans Erbjudanden"
-                android:backgroundTint="@color/lidl_blue"
+                android:backgroundTint="@color/favourite_red"
                 android:textAllCaps="false" />
 
 
@@ -92,7 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Veckans Erbjudanden"
-                android:backgroundTint="@color/coop_green"
+                android:backgroundTint="@color/favourite_red"
                 android:textAllCaps="false" />
 
 
