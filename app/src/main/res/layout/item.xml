@@ -39,9 +39,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:text="Kategori:"
-                    android:textColor="@color/black"
+                    android:textColor="@color/gray"
                     android:textSize="14sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/product_name1"
@@ -91,8 +92,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8sp"
                     android:text="Mat"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:textColor="@color/gray"
+                    android:textSize="14sp"
+                    android:visibility="gone"/>
 
                 <TextView
                     android:id="@+id/product_name"
