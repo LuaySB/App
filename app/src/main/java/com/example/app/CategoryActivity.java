@@ -1,26 +1,23 @@
-package com.example.notespro;
+package com.example.app;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
-
 import java.util.ArrayList;
 
 public class CategoryActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    ArrayList<Product> productArrayList;
+    ArrayList<Product> products;
     MyAdapter myAdapter;
     FirebaseFirestore db;
     ProgressDialog progressDialog;
@@ -44,8 +41,8 @@ public class CategoryActivity extends AppCompatActivity {
         kategori = getIntent().getStringExtra("kategori");
 
         db = FirebaseFirestore.getInstance();
-        productArrayList = new ArrayList<Product>();
-        myAdapter = new MyAdapter(CategoryActivity.this, productArrayList);
+        products = new ArrayList<Product>();
+        myAdapter = new MyAdapter(CategoryActivity.this, products);
 
         recyclerView.setAdapter(myAdapter);
 
@@ -74,7 +71,7 @@ public class CategoryActivity extends AppCompatActivity {
                             if (dc.getType() == DocumentChange.Type.ADDED){
                                 Product product = dc.getDocument().toObject(Product.class);
                                 product.setPrice(product.getPrice().replaceAll("[^.0123456789]",""));
-                                productArrayList.add(product);
+                                products.add(product);
                             }
 
                             myAdapter.notifyDataSetChanged();
@@ -103,7 +100,7 @@ public class CategoryActivity extends AppCompatActivity {
                             if (dc.getType() == DocumentChange.Type.ADDED){
                                 Product product = dc.getDocument().toObject(Product.class);
                                 product.setPrice(product.getPrice().replaceAll("[^.0123456789]",""));
-                                productArrayList.add(product);
+                                products.add(product);
                             }
 
                             myAdapter.notifyDataSetChanged();
@@ -132,7 +129,7 @@ public class CategoryActivity extends AppCompatActivity {
                             if (dc.getType() == DocumentChange.Type.ADDED){
                                 Product product = dc.getDocument().toObject(Product.class);
                                 product.setPrice(product.getPrice().replaceAll("[^.0123456789]",""));
-                                productArrayList.add(product);
+                                products.add(product);
                             }
 
                             myAdapter.notifyDataSetChanged();
@@ -161,7 +158,7 @@ public class CategoryActivity extends AppCompatActivity {
                             if (dc.getType() == DocumentChange.Type.ADDED){
                                 Product product = dc.getDocument().toObject(Product.class);
                                 product.setPrice(product.getPrice().replaceAll("[^.0123456789]",""));
-                                productArrayList.add(product);
+                                products.add(product);
                             }
 
                             myAdapter.notifyDataSetChanged();

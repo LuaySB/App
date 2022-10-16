@@ -1,11 +1,11 @@
-package com.example.notespro;
+package com.example.app;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import com.example.notespro.databinding.ActivityMainBinding;
+import com.example.app.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity{
 

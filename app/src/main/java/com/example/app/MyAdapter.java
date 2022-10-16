@@ -1,4 +1,4 @@
-package com.example.notespro;
+package com.example.app;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,12 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -44,7 +41,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
 
         Product product = products.get(position);
 
-        //Namn, Prefix och Affär från databas till view-objekt
+        //Sänd data från klass-objekt till view-objekt
         holder.name.setText(product.offer);
         holder.pre.setText(product.pre);
         holder.store.setText(product.store);

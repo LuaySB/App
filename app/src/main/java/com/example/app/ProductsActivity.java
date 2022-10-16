@@ -1,14 +1,12 @@
-package com.example.notespro;
+package com.example.app;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
-
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -20,7 +18,7 @@ import java.util.ArrayList;
 
 public class ProductsActivity extends AppCompatActivity {
     RecyclerView recyclerView;
-    ArrayList<Product> productArrayList;
+    ArrayList<Product> products;
     MyAdapter myAdapter;
     FirebaseFirestore db;
     ProgressDialog progressDialog;
@@ -34,7 +32,7 @@ public class ProductsActivity extends AppCompatActivity {
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
-        progressDialog.setMessage("Fetching Data...");
+        progressDialog.setMessage("Hämtar Data...");
         progressDialog.show();
 
         recyclerView = findViewById(R.id.recyclerView);
@@ -44,8 +42,8 @@ public class ProductsActivity extends AppCompatActivity {
         store = getIntent().getStringExtra("store");
 
         db = FirebaseFirestore.getInstance();
-        productArrayList = new ArrayList<Product>();
-        myAdapter = new MyAdapter(ProductsActivity.this, productArrayList);
+        products = new ArrayList<Product>();
+        myAdapter = new MyAdapter(ProductsActivity.this, products);
 
         recyclerView.setAdapter(myAdapter);
 
@@ -74,7 +72,7 @@ public class ProductsActivity extends AppCompatActivity {
                             if (dc.getType() == DocumentChange.Type.ADDED){
                                 Product product = dc.getDocument().toObject(Product.class);
                                 product.setPrice(product.getPrice().replaceAll("[^.0123456789]",""));
-                                productArrayList.add(product);
+                                products.add(product);
                             }
 
                             myAdapter.notifyDataSetChanged();

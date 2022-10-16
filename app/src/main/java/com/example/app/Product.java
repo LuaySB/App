@@ -1,4 +1,4 @@
-package com.example.notespro;
+package com.example.app;
 
 import com.google.firebase.firestore.IgnoreExtraProperties;
 

@@ -1,15 +1,10 @@
-package com.example.notespro;
-
-import android.widget.EditText;
+package com.example.app;
 
 public class User {
     public String name, email, homeAdress, mobileNumber, dateOfBirth;
 
-    public User() {
+    public User() {}
 
-    }
-
-    /* Konstruktor */
     public User(String name, String email, String homeAdress, String mobileNumber, String dateOfBirth) {
         this.name = name;
         this.email = email;

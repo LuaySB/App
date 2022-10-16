@@ -110,7 +110,8 @@
                     android:layout_marginVertical="8dp"
                     android:background="@drawable/custom_button"
                     android:text="Kategori 7"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    android:visibility="gone"/>
 
                 <Button
                     android:id="@+id/buttonCategory8"
@@ -119,7 +120,8 @@
                     android:layout_marginVertical="8dp"
                     android:background="@drawable/custom_button"
                     android:text="Kategori 8"
-                    android:textAllCaps="false" />
+                    android:textAllCaps="false"
+                    android:visibility="gone"/>
 
             </LinearLayout>
 

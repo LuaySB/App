@@ -1,4 +1,4 @@
-package com.example.notespro;
+package com.example.app;
 
 import android.content.Context;
 
