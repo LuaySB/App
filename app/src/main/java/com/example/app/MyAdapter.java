@@ -61,15 +61,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder>{
         }
 
         //Hämta bild för display
-        if(product.store.equals("Coop Kronoparken")){
+        if(product.store.equals("Coop Kronoparken") || product.store.equals("Stora Coop välsviken")){
             Glide.with(context).load("https:" + product.image).into(holder.image);
-
-        }else if(product.store.equals("Stora Coop välsviken")) {
-            Glide.with(context).load("https:" + product.image).into(holder.image);
-
-        }else if(product.store.equals("Lidl")) {
-            holder.image.setImageResource(R.drawable.lidllogo);
-
         }else{
             Glide.with(context).load(product.image).into(holder.image);
         }
