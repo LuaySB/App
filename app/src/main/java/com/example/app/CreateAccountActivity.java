@@ -22,7 +22,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class CreateAccountActivity extends AppCompatActivity {
 
     private EditText personNameEditText, emailEditText, passwordEditText, confirmPasswordEditText, mobileNumberEditText, dateOfBirthEditText, homeAdressEditText;
-    private String personName, email, mobileNumber, dateOfBirth, homeAdress, password;
+    private String personName, email, mobileNumber, dateOfBirth, homeAdress, password, icaFav, coopvFav, coopkFav, lidlFav;
+    //private FavouriteStores favStores;
     private Button createAccountBtn;
     private ProgressBar progressBar;
     private TextView loginBtnTextView;
@@ -67,7 +68,14 @@ public class CreateAccountActivity extends AppCompatActivity {
                     dateOfBirth = dateOfBirthEditText.getText().toString();
                     homeAdress = homeAdressEditText.getText().toString();
                     password = passwordEditText.getText().toString();
-                    user = new User(personName, email, homeAdress, mobileNumber, dateOfBirth);
+
+                    icaFav = "NO";
+                    coopvFav = "NO";
+                    coopkFav = "NO";
+                    lidlFav = "NO";
+
+                    user = new User(personName, email, homeAdress, mobileNumber, dateOfBirth,
+                            icaFav, coopvFav, coopkFav, lidlFav);
                     registerUser();
                 }
             }
