@@ -1,7 +1,14 @@
 package com.example.app;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.icu.text.CaseMap;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.FrameLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -12,6 +19,10 @@ public class MainActivity extends AppCompatActivity{
 
     ActivityMainBinding binding;
 
+    /* För att komma åt homeFragment.getSwitchStatus()
+    * För att kunna byta språk.  */
+    HomeFragment homeFragment = new HomeFragment();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,14 +30,12 @@ public class MainActivity extends AppCompatActivity{
         setContentView(binding.getRoot());
         replaceFragment(new HomeFragment());
 
-
         binding.bottomNavigationView2.setOnItemSelectedListener(item -> {
             switch(item.getItemId()) {
-
-                case R.id.home:            replaceFragment(new HomeFragment());    break;
-                case R.id.search:          replaceFragment(new SearchFragment());  break;
-                case R.id.compare:         replaceFragment(new CompareFragment()); break;
-                case R.id.list_bulleted:   replaceFragment(new CategoryFragment());    break;
+                case R.id.home:            replaceFragment(new HomeFragment());     break;
+                case R.id.search:          replaceFragment(new SearchFragment());   break;
+                case R.id.compare:         replaceFragment(new CompareFragment());  break;
+                case R.id.list_bulleted:   replaceFragment(new CategoryFragment()); break;
             }
             return true;
         });

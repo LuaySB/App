@@ -3,10 +3,17 @@ package com.example.app;
 import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.Switch;
+import android.widget.TextView;
+
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
@@ -19,7 +26,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     FirebaseAuth mAuth;
     ImageButton logOutButton, menuBtn;
-
+    Switch changeFromSwedishToEnglish;
+    TextView homeTitle, welcomeText, welcomeMessage;
 
     public HomeFragment() {}
 
@@ -46,14 +54,41 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        homeTitle = view.findViewById(R.id.homeTitle);
+        welcomeText = view.findViewById(R.id.welcomeText);
+        welcomeMessage = view.findViewById(R.id.welcomeMessage);
+
         logOutButton = view.findViewById(R.id.logOutBtn);
         menuBtn = view.findViewById(R.id.start_screen_menu_btn);
 
         logOutButton.setOnClickListener(this);
         menuBtn.setOnClickListener((v)-> startActivity(new Intent(getContext(), QuestionsActivity.class)));
 
+        /* To change language from Swedish -> English START */
+        changeFromSwedishToEnglish = view.findViewById(R.id.switchToEnglish);
+        changeFromSwedishToEnglish.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (changeFromSwedishToEnglish.isChecked()) {
+                    homeTitle.setText("Home");
+                    welcomeText.setText("Welcome!");
+                    welcomeMessage.setText("This app shows you what offers are available locally in your stores in Karlstad. You can click on the icons in the menu bar below and start looking for offers!");
+
+                }
+                else {
+                    homeTitle.setText("Hem");
+                    welcomeText.setText("Välkommen!");
+                    welcomeMessage.setText("Denna app är designad för dig som vill se vilka erbjudande som finns i dina butiker lokalt i Karlstad. Du kan klicka på ikonerna i meny-baren under och börja leta erbjudanden!!");
+                }
+            }
+        });
+
+        /* To change language from Swedish -> English END */
+
         return view;
     }
+
 
     @Override
     public void onClick(View v) {
@@ -63,5 +98,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         }
         else
             return;
+    }
+
+
+    public Boolean getSwitchStatus() {
+        if(changeFromSwedishToEnglish.isChecked()) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
