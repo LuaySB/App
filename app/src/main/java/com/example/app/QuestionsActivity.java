@@ -1,6 +1,8 @@
 package com.example.app;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 
 public class QuestionsActivity extends AppCompatActivity {

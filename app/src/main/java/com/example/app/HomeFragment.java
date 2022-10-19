@@ -25,7 +25,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private String mParam2;
 
     FirebaseAuth mAuth;
-    ImageButton logOutButton, menuBtn;
+    ImageButton logOutButton, helpBtn, notificationBtn;
     Switch changeFromSwedishToEnglish;
     TextView homeTitle, welcomeText, welcomeMessage;
 
@@ -59,10 +59,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         welcomeMessage = view.findViewById(R.id.welcomeMessage);
 
         logOutButton = view.findViewById(R.id.logOutBtn);
-        menuBtn = view.findViewById(R.id.start_screen_menu_btn);
+        helpBtn = view.findViewById(R.id.help_btn);
+        notificationBtn = view.findViewById(R.id.notification_btn);
 
         logOutButton.setOnClickListener(this);
-        menuBtn.setOnClickListener((v)-> startActivity(new Intent(getContext(), QuestionsActivity.class)));
+        helpBtn.setOnClickListener((v)-> startActivity(new Intent(getContext(), QuestionsActivity.class)));
+        notificationBtn.setOnClickListener((v)-> getActivity().startService(new Intent(this.getActivity(), NotificationHandler.class)));
 
         /* To change language from Swedish -> English START */
         changeFromSwedishToEnglish = view.findViewById(R.id.switchToEnglish);

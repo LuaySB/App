@@ -42,7 +42,7 @@
                 android:padding="16dp"/>
 
             <ImageButton
-                android:id="@+id/start_screen_menu_btn"
+                android:id="@+id/help_btn"
                 android:layout_width="64dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentEnd="true"
@@ -55,13 +55,13 @@
                 android:id="@+id/switchToEnglish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/help_btn"
+                android:layout_centerVertical="true"
                 android:text="English"
+                android:textColor="@color/white"
                 android:textOff="English"
                 android:textOn="Svenska"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:layout_marginTop="19.5dp"
-                android:layout_marginLeft="260dp"/>
+                android:textSize="16sp" />
 
         </RelativeLayout>
 
@@ -99,6 +99,17 @@
                     android:textSize="24sp" />
 
             </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/notification_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_baseline_notifications_24"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/rounded_corner_my_primary_90"
+                app:tint="@color/white"
+                android:layout_margin="12dp"/>
 
         </RelativeLayout>
 

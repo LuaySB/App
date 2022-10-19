@@ -61,7 +61,7 @@
             </intent-filter>
         </activity>
         <service
-            android:name = ".NotificationSendnoti"
+            android:name = ".NotificationHandler"
             android:label = "@string/app_name"
             android:exported="true">
             <intent-filter>
