@@ -76,12 +76,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     homeTitle.setText("Home");
                     welcomeText.setText("Welcome!");
                     welcomeMessage.setText("This app shows you what offers are available locally in your stores in Karlstad. You can click on the icons in the menu bar below and start looking for offers!");
-
+                    changeFromSwedishToEnglish.setText("Svenska");
                 }
                 else {
                     homeTitle.setText("Hem");
                     welcomeText.setText("Välkommen!");
                     welcomeMessage.setText("Denna app är designad för dig som vill se vilka erbjudande som finns i dina butiker lokalt i Karlstad. Du kan klicka på ikonerna i meny-baren under och börja leta erbjudanden!!");
+                    changeFromSwedishToEnglish.setText("English");
                 }
             }
         });

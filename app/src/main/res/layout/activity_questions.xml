@@ -2,133 +2,75 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/my_background_xml"
-    android:padding="16dp">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/my_background_xml">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/rounded_corner_cardbord"
-        android:padding="16dp">
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/title_bar_layout"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="64dp"
+            android:background="@color/my_primary"
+            android:id="@+id/home_activity_top_layout">
 
-            <TextView
-                android:id="@+id/page_title"
+
+            <ImageButton
+                android:id="@+id/backBtn_questions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Q &amp; A"
-                android:textSize="32sp"
-                android:fontFamily="cursive"
-                android:textStyle="bold"/>
+                android:src="@drawable/ic_baseline_arrow_back_24"
+                android:backgroundTint="@color/my_primary"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                app:tint="@color/white"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView2"
-                android:text="Vanliga frågor:"
+                android:id="@+id/homeTitle"
+                android:text="Q &amp; A"
+                android:background="@color/my_primary"
+                android:textColor="@color/white"
                 android:textSize="24sp"
-                android:fontFamily="cursive"
                 android:textStyle="bold"
-                android:layout_marginBottom="24dp"/>
+                android:fontFamily="cursive"
+                android:layout_toRightOf="@+id/backBtn_questions"
+                android:padding="16dp"/>
 
-        </LinearLayout>
+            <Switch
+                android:id="@+id/switchToEnglish_questions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="English"
+                android:textColor="@color/white"
+                android:textOff="English"
+                android:textOn="Svenska"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scrollbars="none"
-            android:layout_below="@+id/title_bar_layout">
+            android:layout_below="@+id/home_activity_top_layout"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:id="@+id/Questions">
-
-                <TextView
-                    android:id="@+id/question1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:layout_marginBottom="12dp"
-                    android:text="Hur hittar jag fler butiker att söka erbjudanden i?"/>
-
-                <TextView
-                    android:id="@+id/answer1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:text="Hittils finns det 4 affärer att välja mellan: Ica Maxi Välsviken, Stora Coop Välsviken, Lidl Kroppkärr and Coop Kronoparken. Fler affärer kan komma i framtiden"/>
-
-                <TextView
-                    android:id="@+id/question2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:text="Jag känner inte igen affärerna, hur hittar jag affärer i mitt närområde?"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/answer2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:text="Just nu har vi bara affärer i Karlstad. Det kan komma fler affärer i framtiden"/>
-
-                <TextView
-                    android:id="@+id/question3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:text="Finns det kattmat? Min katt Curry är hungrig och jag behöver köpa kattmat"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/answer3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:text="Om du har tur så finns det erbjudande på kattmat. Gå in på sökfunktionen och skriv kattmat"/>
-
-                <TextView
-                    android:id="@+id/question4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:text="Hur ofta uppdateras erbjudandena?"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/answer4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:text="De uppdateras direkt butikerna uppdaterar sina erbjudanden. Så länge våra servrar är uppe"/>
-
-                <TextView
-                    android:id="@+id/question5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:text="Hur får jag ett nytt ICA-kort?"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/answer5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="24dp"
-                    android:text="Har du ett ICA Kort sedan tidigare kan du beställa nytt kort direkt under &quot;Ditt konto&quot; (kräver inloggning) som du når under ditt namn längst upp till höger på sidan. Du kan även kontakta ICA Kundservice på telefon 033-47 47 90."/>
-
-            </LinearLayout>
+            <WebView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/webView">
+            </WebView>
 
         </ScrollView>
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>

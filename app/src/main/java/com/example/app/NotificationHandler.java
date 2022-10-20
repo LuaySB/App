@@ -76,7 +76,7 @@ public class NotificationHandler extends Service{
     private void createNotification(){
         NotificationManager mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE) ;
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), default_notification_channel_id ) ;
-        mBuilder.setContentTitle("Veckans Nya Erbjudanden Från Favoriten!");
+        mBuilder.setContentTitle("Veckans Nya Erbjudanden Ute Nu!");
         mBuilder.setContentText("Logga In För Att Se Nu!");
 
         // mBuilder.setTicker( "Notification Listener Service Example");
