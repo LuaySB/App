@@ -36,7 +36,6 @@
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:fontFamily="cursive"
                 android:layout_toRightOf="@+id/backBtn_questions"
                 android:padding="16dp"/>
 

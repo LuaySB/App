@@ -35,7 +35,6 @@
                 android:layout_height="wrap_content"
                 android:text="Välkommen tillbaka"
                 android:textAlignment="center"
-                android:fontFamily="cursive"
                 android:textColor="@color/black"
                 android:textSize="36sp"
                 android:textStyle="bold" />

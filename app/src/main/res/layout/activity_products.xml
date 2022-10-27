@@ -22,7 +22,6 @@
             android:text="Produkter"
             android:textColor="@color/white"
             android:textSize="30sp"
-            android:fontFamily="cursive"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

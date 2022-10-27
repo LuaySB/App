@@ -13,7 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:background="@color/my_primary"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+    </View>
 
     <TextView
         android:id="@+id/textTitle"
@@ -26,7 +28,6 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
-        android:fontFamily="cursive"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -104,5 +105,16 @@
         </LinearLayout>
 
     </ScrollView>
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/textTitle"
+        android:paddingLeft="290dp"
+        android:paddingTop="20dp"
+        android:text="English"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

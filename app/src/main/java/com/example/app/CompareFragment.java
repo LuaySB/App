@@ -12,6 +12,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
@@ -32,6 +35,9 @@ public class CompareFragment extends Fragment{
     String[] stores = {"coop kronoparken", "coop välsviken", "ica", "lidl"};
 
     SearchView searchview;
+
+    TextView mainTitle, produktTitle;
+    Switch changeFromSwedishToEnglish;
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -64,6 +70,11 @@ public class CompareFragment extends Fragment{
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_compare, container, false);
+        View view2 = inflater.inflate(R.layout.item, container, false);
+
+        mainTitle = view.findViewById(R.id.text_view);
+        produktTitle = view2.findViewById(R.id.product_name1);
+
 
         searchview = view.findViewById(R.id.searchView);
         searchview.clearFocus();
@@ -96,6 +107,25 @@ public class CompareFragment extends Fragment{
         productList.setAdapter(myAdapter);
 
         EventChangeListener();
+
+        /* To change language from Swedish -> English START */
+        changeFromSwedishToEnglish = view.findViewById(R.id.switch2);
+        changeFromSwedishToEnglish.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (changeFromSwedishToEnglish.isChecked()) {
+                    produktTitle.setText("Product");
+                    mainTitle.setText("Search after products");
+                    changeFromSwedishToEnglish.setText("Svenska");
+                }
+                else {
+                    produktTitle.setText("Produkt");
+                    mainTitle.setText("Sök efter produkter");
+                    changeFromSwedishToEnglish.setText("English");
+                }
+            }
+        });
 
         return view;
 

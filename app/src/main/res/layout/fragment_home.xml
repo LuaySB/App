@@ -37,7 +37,6 @@
                 android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:fontFamily="cursive"
                 android:layout_toRightOf="@+id/logOutBtn"
                 android:padding="16dp"/>
 
@@ -83,8 +82,7 @@
                     android:layout_gravity="center"
                     android:padding="32dp"
                     android:text="Välkommen!"
-                    android:textSize="32sp"
-                    android:fontFamily="cursive"/>
+                    android:textSize="32sp" />
 
                 <TextView
                     android:id="@+id/welcomeMessage"
@@ -92,7 +90,6 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="center"
-                    android:fontFamily="cursive"
                     android:padding="32dp"
                     android:text="Denna app är designad för dig som vill se vilka erbjudande som finns i dina butiker lokalt i Karlstad. Du kan klicka på ikonerna i meny-baren under och börja leta erbjudanden!"
                     android:textAlignment="center"

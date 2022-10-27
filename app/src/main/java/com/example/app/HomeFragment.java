@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
+import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,6 +29,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     ImageButton logOutButton, helpBtn, notificationBtn;
     Switch changeFromSwedishToEnglish;
     TextView homeTitle, welcomeText, welcomeMessage;
+
+    Language l = new Language();
 
     public HomeFragment() {}
 
@@ -101,15 +104,5 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         }
         else
             return;
-    }
-
-
-    public Boolean getSwitchStatus() {
-        if(changeFromSwedishToEnglish.isChecked()) {
-            return true;
-        }
-        else {
-            return false;
-        }
     }
 }

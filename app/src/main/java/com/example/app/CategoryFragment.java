@@ -7,6 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.TextView;
 
 public class CategoryFragment extends Fragment implements View.OnClickListener{
 
@@ -17,6 +20,10 @@ public class CategoryFragment extends Fragment implements View.OnClickListener{
     private String mParam2;
 
     public CategoryFragment() {}
+
+    Switch changeFromSwedishToEnglish;
+
+    TextView mainTitle, fruktOchGront, farskvaror, mejeri, kottFagelFisk, skafferi, ovrigt;
 
     Button button1;
     Button button2;
@@ -49,6 +56,16 @@ public class CategoryFragment extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_category, container, false);
+
+        mainTitle = view.findViewById(R.id.textTitle);
+        fruktOchGront = view.findViewById(R.id.buttonCategory1);
+        farskvaror = view.findViewById(R.id.buttonCategory2);
+        mejeri = view.findViewById(R.id.buttonCategory3);
+        kottFagelFisk = view.findViewById(R.id.buttonCategory4);
+        skafferi = view.findViewById(R.id.buttonCategory5);
+        ovrigt = view.findViewById(R.id.buttonCategory6);
+
+
         button1 = view.findViewById(R.id.buttonCategory1);
         button1.setOnClickListener(this);
         button2 = view.findViewById(R.id.buttonCategory2);
@@ -63,6 +80,35 @@ public class CategoryFragment extends Fragment implements View.OnClickListener{
         button6.setOnClickListener(this);
         button7 = view.findViewById(R.id.buttonCategory7);
         button7.setOnClickListener(this);
+
+        /* To change language from Swedish -> English START */
+        changeFromSwedishToEnglish = view.findViewById(R.id.switch2);
+        changeFromSwedishToEnglish.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (changeFromSwedishToEnglish.isChecked()) {
+                    mainTitle.setText("Categories");
+                    fruktOchGront.setText("Fruit & Vegetables");
+                    farskvaror.setText("Fresh Produce");
+                    mejeri.setText("Dairy");
+                    kottFagelFisk.setText("Meat, Poultry & Fish");
+                    skafferi.setText("Pantry");
+                    ovrigt.setText("Other");
+                    changeFromSwedishToEnglish.setText("Svenska");
+                }
+                else {
+                    mainTitle.setText("Kategorier");
+                    fruktOchGront.setText("Frukt & Grönt");
+                    farskvaror.setText("Färskvaror");
+                    mejeri.setText("Mejeri");
+                    kottFagelFisk.setText("Kött, Fågel & Fisk");
+                    skafferi.setText("Skafferi");
+                    ovrigt.setText("Övrigt");
+                    changeFromSwedishToEnglish.setText("English");
+                }
+            }
+        });
         return view;
     }
 

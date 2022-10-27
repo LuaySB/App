@@ -10,9 +10,11 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import com.example.app.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+
+    Language l = new Language();
 
     /* För att komma åt homeFragment.getSwitchStatus()
     * För att kunna byta språk.  */
@@ -24,19 +26,25 @@ public class MainActivity extends AppCompatActivity{
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         replaceFragment(new HomeFragment());
-
         binding.bottomNavigationView2.setOnItemSelectedListener(item -> {
-            switch(item.getItemId()) {
-                case R.id.home:            replaceFragment(new HomeFragment());     break;
-                case R.id.search:          replaceFragment(new SearchFragment());   break;
-                case R.id.compare:         replaceFragment(new CompareFragment());  break;
-                case R.id.list_bulleted:   replaceFragment(new CategoryFragment()); break;
+            switch (item.getItemId()) {
+                case R.id.home:
+                    replaceFragment(new HomeFragment());
+                    break;
+                case R.id.search:
+                    replaceFragment(new SearchFragment());
+                    break;
+                case R.id.compare:
+                    replaceFragment(new CompareFragment());
+                    break;
+                case R.id.list_bulleted:
+                    replaceFragment(new CategoryFragment());
+                    break;
             }
             return true;
         });
 
     }
-
 
     /* Switchar till en ny sida när man klickar på alternativen i menyn längst ner */
     private void replaceFragment(Fragment fragment) {

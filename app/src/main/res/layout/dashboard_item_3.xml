@@ -56,7 +56,7 @@
                 android:paddingLeft="80dp"
                 android:text="Lidl Kroppkärr"
                 android:textColor="@color/black"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -66,12 +66,12 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="80dp"
                 android:paddingTop="20dp"
-                android:text="Öppet idag 07:30-22:00"
+                android:text="07:30-22:00"
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
+            <!--
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -83,6 +83,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+                -->
 
             <ImageButton
                 android:id="@+id/likeLidl"

@@ -13,7 +13,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
+import android.widget.Switch;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -34,6 +37,10 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
 
     private DatabaseReference rootDatabaseref;
     private FirebaseAuth mAuth;
+
+    Switch changeFromSwedishToEnglish;
+
+    private TextView mainTitle;
 
     private Button IcaButton;
     private Button LidlButton;
@@ -76,6 +83,8 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_search, container, false);
+
+        mainTitle = view.findViewById(R.id.textTitle);
         IcaButton = view.findViewById(R.id.buttonIca);
         IcaButton.setOnClickListener(this);
         LidlButton = view.findViewById(R.id.buttonLidl);
@@ -166,6 +175,32 @@ public class SearchFragment extends Fragment implements View.OnClickListener{
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {}
+        });
+
+
+        /* To change language from Swedish -> English START */
+        changeFromSwedishToEnglish = view.findViewById(R.id.switch2);
+        changeFromSwedishToEnglish.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (changeFromSwedishToEnglish.isChecked()) {
+                    mainTitle.setText("Stores");
+                    IcaButton.setText("See offers");
+                    CoopKButton.setText("See offers");
+                    CoopVButton.setText("See offers");
+                    LidlButton.setText("See offers");
+                    changeFromSwedishToEnglish.setText("Svenska");
+                }
+                else {
+                    mainTitle.setText("Butiker");
+                    IcaButton.setText("Se erbjudanden");
+                    CoopKButton.setText("Se erbjudanden");
+                    CoopVButton.setText("Se erbjudanden");
+                    LidlButton.setText("Se erbjudanden");
+                    changeFromSwedishToEnglish.setText("English");
+                }
+            }
         });
 
         return view;

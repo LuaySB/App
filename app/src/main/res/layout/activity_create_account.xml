@@ -51,7 +51,6 @@
                         android:layout_marginHorizontal="16dp"
                         android:gravity="center_vertical"
                         android:text="Skapa Nytt Konto"
-                        android:fontFamily="cursive"
                         android:textColor="@color/black"
                         android:textSize="28sp"
                         android:textStyle="bold" />
